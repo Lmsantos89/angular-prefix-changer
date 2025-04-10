@@ -30,9 +30,13 @@ npx change-prefix -p <new-prefix> -o <old-prefix>
 
 - `-o, --old-prefix <old-prefix>` - The old prefix to replace (required).
 
+- `--dry-run`: Preview changes without applying them (optional).
+
 ## Example
 
 To change all instances of `myapp` to `fooapp`:
+
+### Without Dry Run
 
 ```
 npx change-prefix -p fooapp -o myapp
@@ -43,9 +47,24 @@ You’ll be prompted to confirm:
 ```
 Are you sure you want to replace prefix "myapp" with "fooapp"? (yes/no):
 ```
+- Type `yes` to apply, `no` to exit.
 
-- Type `yes` or `y` to proceed
-- Type `no` or anything else to cancel
+### With Dry Run
+Preview replacing `myapp` with `fooapp`:
+```
+npx change-prefix -p cool -o myapp --dry-run
+```
+
+### Output:
+
+```
+Dry run mode: No changes will be applied. Here’s what would happen:
+Would update angular.json: Set prefix to "fooapp" for project "your-project"
+Would update src/app.component.ts: Replace "myapp-" with "fooapp-" in selectors
+Would update src/app.component.html: Replace "<myapp-" with "<fooapp-" in tags
+Would you like to apply these changes? (yes/no):
+```
+- Type `yes` to apply, `no` to exit.
 
 ### Successful Output
 

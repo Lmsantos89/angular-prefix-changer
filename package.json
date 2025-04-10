@@ -1,6 +1,6 @@
 {
   "name": "angular-prefix-changer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI tool to change Angular selector prefixes",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
