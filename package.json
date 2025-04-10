@@ -1,0 +1,30 @@
+{
+  "name": "angular-prefix-changer",
+  "version": "1.0.0",
+  "description": "CLI tool to change Angular selector prefixes",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "change-prefix": "./dist/cli.js"
+  },
+  "keywords": [
+    "angular",
+    "prefix",
+    "cli"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "lmsantos",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "replace-in-file": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "^5.8.3"
+  }
+}
